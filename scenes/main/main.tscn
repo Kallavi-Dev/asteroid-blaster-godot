@@ -39,8 +39,9 @@ script = ExtResource("6_starfield")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 
-[node name="Player" parent="." instance=ExtResource("2_player")]
-position = Vector2(960, 980)
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Entities" type="Node2D" parent="."]
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
@@ -88,3 +89,6 @@ layout_mode = 2
 custom_minimum_size = Vector2(200, 50)
 size_flags_horizontal = 4
 text = "START GAME"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("../Entities")

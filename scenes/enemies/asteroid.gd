@@ -63,9 +63,10 @@ func setup(size: Constants.AsteroidSize, spawn_position: Vector2) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Bullet:
+		var scorer_id: int = (area as Bullet).owner_peer_id
 		area.queue_free()
 		var score_value: int = Constants.ASTEROID_SIZE_SCORES[asteroid_size]
-		GameManager.add_score(score_value)
+		GameManager.add_score(score_value, scorer_id)
 		GameManager.register_kill()
 		AudioManager.play_explosion()
 		destroyed.emit(global_position, asteroid_size)

@@ -42,18 +42,17 @@ func _process(delta: float) -> void:
 		_direction = 1.0
 
 
-func take_hit() -> void:
+func take_hit(scorer_id: int = 1) -> void:
 	_health -= 1
 	_health_bar.value = _health
 	health_changed.emit(_health, _max_health)
 
-	# Flash red on hit
 	modulate = Color(1.0, 0.3, 0.3)
 	var tween := create_tween()
 	tween.tween_property(self, "modulate", Color.WHITE, 0.1)
 
 	if _health <= 0:
-		GameManager.add_score(Constants.BOSS_SCORE_VALUE)
+		GameManager.add_score(Constants.BOSS_SCORE_VALUE, scorer_id)
 		GameManager.register_kill()
 		destroyed.emit(global_position)
 		queue_free()
@@ -61,8 +60,9 @@ func take_hit() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Bullet:
+		var scorer_id: int = (area as Bullet).owner_peer_id
 		area.queue_free()
-		take_hit()
+		take_hit(scorer_id)
 	elif area is Player:
 		(area as Player).take_damage()
 

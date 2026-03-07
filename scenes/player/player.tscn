@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_player"]
 [ext_resource type="Texture2D" path="res://assets/sprites/player/playerShip1_blue.png" id="2_ship_texture"]
@@ -15,6 +15,11 @@ gravity = Vector3(0, 0, 0)
 scale_min = 1.0
 scale_max = 3.0
 color = Color(0.3, 0.6, 1.0, 0.8)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_player"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_player")
@@ -37,3 +42,6 @@ process_material = SubResource("ParticleProcessMaterial_engine")
 [node name="InvincibilityTimer" type="Timer" parent="."]
 
 [node name="PowerUpTimer" type="Timer" parent="."]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_player")

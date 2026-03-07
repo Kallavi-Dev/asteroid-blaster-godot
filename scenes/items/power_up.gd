@@ -3,8 +3,6 @@ extends Area2D
 ## Collectible power-up that falls from destroyed asteroids.
 ## Types: Shield (temporary invincibility), Rapid Fire, Spread Shot.
 
-signal collected(power_type: Constants.PowerUpType)
-
 var power_type: Constants.PowerUpType = Constants.PowerUpType.SHIELD
 var _speed: float = Constants.POWER_UP_SPEED
 
@@ -40,6 +38,6 @@ func _apply_visual() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Player:
-		collected.emit(power_type)
+		(area as Player).apply_power_up(power_type)
 		AudioManager.play_powerup()
 		queue_free()

@@ -4,6 +4,7 @@ extends Area2D
 ## Self-destructs when leaving the viewport.
 
 var direction: Vector2 = Vector2.UP
+var owner_peer_id: int = 1
 
 
 func _process(delta: float) -> void:
