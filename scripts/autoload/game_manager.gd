@@ -8,6 +8,7 @@ signal game_over
 signal game_started
 signal boss_incoming
 
+var game_mode: Constants.GameMode = Constants.GameMode.SOLO
 var score: int = 0
 var lives: int = Constants.PLAYER_INITIAL_LIVES
 var is_playing: bool = false
