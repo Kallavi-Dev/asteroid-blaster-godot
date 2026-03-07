@@ -4,7 +4,7 @@ extends RefCounted
 ## Eliminates magic numbers across the codebase.
 
 # -- Window --
-const VIEWPORT_WIDTH: int = 720
+const VIEWPORT_WIDTH: int = 1920
 const VIEWPORT_HEIGHT: int = 1080
 
 # -- Player --
