@@ -88,6 +88,16 @@ const DIFFICULTY_MIN_SPAWN_INTERVAL: float = 0.3
 # -- Persistence --
 const SAVE_FILE_PATH: String = "user://highscore.save"
 
+# -- Network --
+const NETWORK_PORT: int = 7000
+const NETWORK_MAX_PLAYERS: int = 2
+
+# -- Game Mode --
+enum GameMode { SOLO, COOP, COMPETITIVE }
+
+const COOP_LIVES: int = 5
+const COMPETITIVE_LIVES: int = 3
+
 # -- Groups --
 const GROUP_ASTEROIDS: String = "asteroids"
 const GROUP_BULLETS: String = "bullets"
