@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/enemies/boss.gd" id="1_boss"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/enemyRed4.png" id="2_sprite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boss"]
+size = Vector2(104, 84)
+
+[node name="Boss" type="Area2D"]
+script = ExtResource("1_boss")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_boss")
+
+[node name="BossSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_sprite")
+
+[node name="ShootTimer" type="Timer" parent="."]
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -52.0
+offset_top = -55.0
+offset_right = 52.0
+offset_bottom = -47.0
+show_percentage = false

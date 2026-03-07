@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/game_over_screen.gd" id="1_gameover"]
+[ext_resource type="FontFile" path="res://assets/fonts/kenvector_future.ttf" id="2_font"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font = ExtResource("2_font")
+font_size = 36
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_score"]
+font = ExtResource("2_font")
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="GameOverScreen" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_gameover")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -120.0
+offset_right = 150.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="FinalScoreLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "FINAL SCORE: 0"
+label_settings = SubResource("LabelSettings_score")
+horizontal_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "HIGH SCORE: 0"
+label_settings = SubResource("LabelSettings_score")
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "RESTART"
