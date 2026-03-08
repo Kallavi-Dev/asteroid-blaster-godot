@@ -19,6 +19,13 @@ A 2D space shooter ("Asteroid Blaster") built as a learning project to explore G
 - [x] Pause menu (ESC key)
 - [x] Procedural sound effects (shoot, explosion, hit, power-up)
 - [x] High score save/load to disk
+- [x] 2-Player Multiplayer (Online/LAN via ENet)
+- [x] Co-op Mode (shared score, shared lives)
+- [x] Competitive Mode (individual scores, winner detection)
+- [x] Multiplayer Lobby (host/join, mode select, ready system)
+- [x] Main Menu (Solo/Multiplayer/Quit)
+- [x] 1920x1080 Desktop Widescreen
+- [x] Disconnect Handling (graceful peer/server loss)
 
 ## Feature Details
 

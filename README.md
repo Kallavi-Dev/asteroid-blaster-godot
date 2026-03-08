@@ -85,6 +85,31 @@ DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 | Space | Shoot |
 | ESC | Pause/Resume |
 
+Controls are the same for both players in multiplayer — each player uses their own keyboard on their own machine.
+
+## Multiplayer
+
+### How to Play Together
+
+**LAN (same WiFi):**
+1. Both players open the game
+2. Player 1: Main Menu → Multiplayer → Host Game (note the IP shown)
+3. Player 2: Main Menu → Multiplayer → enter Player 1's IP → Join Game
+4. Host selects Co-op or Competitive
+5. Both click Ready → game starts
+
+**Online (different networks):**
+Same as LAN, but Player 1 needs to:
+- Forward port 7000 (UDP) on their router
+- Share their public IP (find it at whatismyip.com)
+
+### Game Modes
+
+| Mode | Score | Lives | Win Condition |
+|------|-------|-------|---------------|
+| Co-op | Shared | 5 shared | Survive together |
+| Competitive | Individual | 3 each | Highest score wins |
+
 ## Project Structure
 
 ```
@@ -97,10 +122,10 @@ experiment/
 │   ├── projectiles/     # Player bullet with glow shader
 │   ├── items/           # Power-up drops
 │   ├── effects/         # GPU particle explosions
-│   └── ui/              # HUD, game over, pause menu
+│   └── ui/              # HUD, game over, pause, main menu, lobby
 ├── scripts/
 │   ├── constants.gd     # All game constants (no magic numbers)
-│   └── autoload/        # GameManager (signals), AudioManager (SFX)
+│   └── autoload/        # GameManager, AudioManager, NetworkManager
 ├── shaders/             # GLSL glow + shield shaders
 └── project.godot        # Engine config
 ```

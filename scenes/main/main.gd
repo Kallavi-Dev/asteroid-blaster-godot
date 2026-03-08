@@ -38,6 +38,8 @@ func _ready() -> void:
 		_start_button.pressed.connect(_on_start_pressed)
 		_update_high_score_display()
 	else:
+		NetworkManager.player_disconnected.connect(_on_peer_disconnected)
+		NetworkManager.server_disconnected.connect(_on_server_lost)
 		_start_ui.visible = false
 		GameManager.start_game()
 
@@ -211,6 +213,18 @@ func _clear_entities() -> void:
 	for child in _players_node.get_children():
 		child.queue_free()
 	_players.clear()
+
+
+func _on_peer_disconnected(peer_id: int) -> void:
+	if peer_id in _players:
+		_players[peer_id].queue_free()
+		_players.erase(peer_id)
+
+
+func _on_server_lost() -> void:
+	get_tree().paused = false
+	GameManager.reset()
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
 
 
 func _is_host_or_solo() -> bool:

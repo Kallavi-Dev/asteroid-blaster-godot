@@ -107,6 +107,25 @@ DifficultyTimer.timeout
   -> asteroids spawn faster over time
 ```
 
+## Network Layer
+
+### NetworkManager (Autoload)
+- Manages ENet connections (host/join/disconnect)
+- Signals: player_connected, player_disconnected, connection_succeeded, connection_failed, server_disconnected
+- Provides local IP detection for LAN play
+
+### Multiplayer Data Flow
+- Host-authoritative: host runs game logic, clients send input
+- Player positions synced via MultiplayerSynchronizer
+- Entities replicated via MultiplayerSpawner
+- Game events (score, lives) broadcast via @rpc
+- Shooting: client sends RPC to host → host spawns bullet → MultiplayerSpawner replicates
+
+### Game Modes
+- Solo: single player, no networking
+- Co-op: shared score + lives, both players fight together
+- Competitive: individual scores + lives, winner = highest score
+
 ## File Naming
 - Scripts: `snake_case.gd` (Godot convention)
 - Scenes: `snake_case.tscn`
