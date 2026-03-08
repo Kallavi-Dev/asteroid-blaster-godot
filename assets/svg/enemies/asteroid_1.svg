@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Main irregular body (8 vertices) -->
+  <polygon fill="#8B7355" points="42,5 72,8 92,28 95,55 82,82 55,95 22,85 8,60 12,30"/>
+  <!-- Crater 1 -->
+  <polygon fill="#6B5B45" points="35,30 50,28 52,40 38,42"/>
+  <!-- Crater 2 -->
+  <polygon fill="#6B5B45" points="60,55 75,50 78,65 62,68"/>
+  <!-- Crater 3 -->
+  <polygon fill="#6B5B45" points="30,60 42,58 45,72 32,70"/>
+  <!-- Highlight patch -->
+  <polygon fill="#A0906B" points="55,15 70,14 80,25 68,30 52,25"/>
+</svg>

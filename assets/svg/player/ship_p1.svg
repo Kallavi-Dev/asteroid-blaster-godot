@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 75">
+  <!-- Main body -->
+  <polygon fill="#00D4FF" points="49.5,2 62,35 58,70 41,70 37,35"/>
+  <!-- Left wing -->
+  <polygon fill="#00D4FF" points="37,35 10,62 20,50 41,55"/>
+  <!-- Right wing -->
+  <polygon fill="#00D4FF" points="62,35 89,62 79,50 58,55"/>
+  <!-- Left wing accent -->
+  <polygon fill="#00AACC" points="15,58 25,48 38,50 30,60"/>
+  <!-- Right wing accent -->
+  <polygon fill="#00AACC" points="84,58 74,48 61,50 69,60"/>
+  <!-- Cockpit window -->
+  <rect fill="#0099BB" x="44" y="12" width="11" height="14" rx="2"/>
+  <!-- Engine center -->
+  <rect fill="#00AACC" x="43" y="62" width="13" height="8" rx="1"/>
+  <!-- Engine left -->
+  <rect fill="#00AACC" x="36" y="64" width="7" height="6" rx="1"/>
+  <!-- Engine right -->
+  <rect fill="#00AACC" x="56" y="64" width="7" height="6" rx="1"/>
+</svg>

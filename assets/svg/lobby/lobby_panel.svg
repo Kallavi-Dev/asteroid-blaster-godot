@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560">
+  <defs>
+    <clipPath id="panelClip">
+      <rect width="500" height="560" rx="12"/>
+    </clipPath>
+  </defs>
+  <rect width="500" height="560" rx="12" fill="#131720"/>
+  <rect x="2" y="2" width="496" height="556" rx="10" fill="#1A1F2E"/>
+  <rect width="500" height="4" fill="#00D4FF" clip-path="url(#panelClip)"/>
+</svg>

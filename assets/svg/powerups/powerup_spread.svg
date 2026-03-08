@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="22" fill="#7C4DFF"/>
+  <circle cx="24" cy="24" r="16" fill="#5E35B1"/>
+  <polygon points="24,14 22,22 26,22" fill="#FFFFFF"/>
+  <polygon points="17,18 17.5,26 21,24" fill="#FFFFFF" transform="rotate(-20 19 22)"/>
+  <polygon points="31,18 30.5,26 27,24" fill="#FFFFFF" transform="rotate(20 29 22)"/>
+</svg>

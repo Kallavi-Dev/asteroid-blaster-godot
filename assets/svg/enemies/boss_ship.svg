@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 168">
+  <!-- Main wide body -->
+  <polygon fill="#FF3B4F" points="100,4 145,30 160,80 155,130 100,145 45,130 40,80 55,30"/>
+  <!-- Left outer wing -->
+  <polygon fill="#E63545" points="55,30 10,60 5,110 25,130 45,130 40,80"/>
+  <!-- Right outer wing -->
+  <polygon fill="#E63545" points="145,30 190,60 195,110 175,130 155,130 160,80"/>
+  <!-- Left wing tip -->
+  <polygon fill="#D42D3F" points="10,60 2,85 5,110 15,95"/>
+  <!-- Right wing tip -->
+  <polygon fill="#D42D3F" points="190,60 198,85 195,110 185,95"/>
+  <!-- Central cockpit -->
+  <polygon fill="#CC2233" points="100,18 118,40 115,72 85,72 82,40"/>
+  <!-- Upper panel left -->
+  <polygon fill="#E63545" points="82,40 60,50 55,75 85,72"/>
+  <!-- Upper panel right -->
+  <polygon fill="#E63545" points="118,40 140,50 145,75 115,72"/>
+  <!-- Lower body panel -->
+  <polygon fill="#D42D3F" points="85,72 115,72 120,110 100,120 80,110"/>
+  <!-- Side panel left -->
+  <polygon fill="#D42D3F" points="55,75 40,80 45,120 80,110 85,72"/>
+  <!-- Side panel right -->
+  <polygon fill="#D42D3F" points="145,75 160,80 155,120 120,110 115,72"/>
+  <!-- Weapon mount left -->
+  <rect fill="#991A28" x="30" y="125" width="12" height="18" rx="2"/>
+  <!-- Weapon mount center-left -->
+  <rect fill="#991A28" x="70" y="132" width="10" height="16" rx="2"/>
+  <!-- Weapon mount center-right -->
+  <rect fill="#991A28" x="120" y="132" width="10" height="16" rx="2"/>
+  <!-- Weapon mount right -->
+  <rect fill="#991A28" x="158" y="125" width="12" height="18" rx="2"/>
+</svg>
