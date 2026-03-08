@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="5_pause"]
 [ext_resource type="Script" path="res://scenes/main/starfield.gd" id="6_starfield"]
 [ext_resource type="FontFile" path="res://assets/fonts/kenvector_future.ttf" id="7_font"]
-[ext_resource type="Texture2D" path="res://assets/backgrounds/darkPurple.png" id="7_bg"]
+[ext_resource type="Texture2D" path="res://assets/svg/backgrounds/space_bg.svg" id="7_bg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_title"]
 font = ExtResource("7_font")

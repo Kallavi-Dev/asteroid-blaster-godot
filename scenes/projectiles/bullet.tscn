@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scenes/projectiles/bullet.gd" id="1_bullet"]
-[ext_resource type="Texture2D" path="res://assets/sprites/lasers/laserBlue01.png" id="2_laser"]
+[ext_resource type="Texture2D" path="res://assets/svg/projectiles/laser_blue.svg" id="2_laser"]
 [ext_resource type="Shader" path="res://shaders/glow.gdshader" id="3_glow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bullet"]

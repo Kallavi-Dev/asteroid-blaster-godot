@@ -31,6 +31,15 @@ func _ready() -> void:
 	_power_up_timer.one_shot = true
 	_power_up_timer.timeout.connect(_on_power_up_timer_timeout)
 
+	setup_visuals()
+
+
+func setup_visuals() -> void:
+	if peer_id == 1 or GameManager.game_mode == Constants.GameMode.SOLO:
+		_ship_sprite.texture = load("res://assets/svg/player/ship_p1.svg")
+	else:
+		_ship_sprite.texture = load("res://assets/svg/player/ship_p2.svg")
+
 
 func _process(delta: float) -> void:
 	if not GameManager.is_playing:

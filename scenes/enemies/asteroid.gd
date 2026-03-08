@@ -6,18 +6,18 @@ extends Area2D
 signal destroyed(asteroid_position: Vector2, asteroid_size: Constants.AsteroidSize)
 
 const LARGE_TEXTURES: Array[String] = [
-	"res://assets/sprites/meteors/meteorBrown_big1.png",
-	"res://assets/sprites/meteors/meteorBrown_big2.png",
-	"res://assets/sprites/meteors/meteorBrown_big3.png",
-	"res://assets/sprites/meteors/meteorBrown_big4.png",
+	"res://assets/svg/enemies/asteroid_1.svg",
+	"res://assets/svg/enemies/asteroid_2.svg",
+	"res://assets/svg/enemies/asteroid_3.svg",
+	"res://assets/svg/enemies/asteroid_4.svg",
 ]
 const MEDIUM_TEXTURES: Array[String] = [
-	"res://assets/sprites/meteors/meteorBrown_med1.png",
-	"res://assets/sprites/meteors/meteorBrown_med3.png",
+	"res://assets/svg/enemies/asteroid_1.svg",
+	"res://assets/svg/enemies/asteroid_2.svg",
 ]
 const SMALL_TEXTURES: Array[String] = [
-	"res://assets/sprites/meteors/meteorBrown_small1.png",
-	"res://assets/sprites/meteors/meteorBrown_small2.png",
+	"res://assets/svg/enemies/asteroid_3.svg",
+	"res://assets/svg/enemies/asteroid_4.svg",
 ]
 
 const SPRITE_SCALE: float = 0.9
