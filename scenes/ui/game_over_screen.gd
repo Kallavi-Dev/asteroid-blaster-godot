@@ -1,5 +1,5 @@
 extends CanvasLayer
-## Game over overlay with final score, high score display, and restart button.
+## Game over overlay. Mode-aware: shows combined or individual scores.
 
 @onready var _final_score_label: Label = $PanelContainer/VBoxContainer/FinalScoreLabel
 @onready var _high_score_label: Label = $PanelContainer/VBoxContainer/HighScoreLabel
@@ -14,7 +14,15 @@ func _ready() -> void:
 
 
 func _on_game_over() -> void:
-	_final_score_label.text = "FINAL SCORE: %d" % GameManager.score
+	match GameManager.game_mode:
+		Constants.GameMode.SOLO:
+			_final_score_label.text = "FINAL SCORE: %d" % GameManager.get_score(1)
+		Constants.GameMode.COOP:
+			_final_score_label.text = "TEAM SCORE: %d" % GameManager.get_score(1)
+		Constants.GameMode.COMPETITIVE:
+			var winner_id := GameManager.get_winner_id()
+			var winner_label := "P1" if winner_id == 1 else "P2"
+			_final_score_label.text = "%s WINS! (%d pts)" % [winner_label, GameManager.get_score(winner_id)]
 	_high_score_label.text = "HIGH SCORE: %d" % GameManager.get_high_score()
 	visible = true
 
@@ -25,4 +33,7 @@ func _on_game_started() -> void:
 
 func _on_restart_pressed() -> void:
 	GameManager.reset()
-	get_tree().reload_current_scene()
+	if GameManager.game_mode == Constants.GameMode.SOLO:
+		get_tree().reload_current_scene()
+	else:
+		get_tree().change_scene_to_file("res://scenes/ui/lobby.tscn")

@@ -1,6 +1,5 @@
 extends CanvasLayer
 ## Pause overlay. Toggled with ESC key.
-## Pauses the scene tree while keeping this UI responsive.
 
 @onready var _resume_button: Button = $PanelContainer/VBoxContainer/ResumeButton
 @onready var _quit_button: Button = $PanelContainer/VBoxContainer/QuitButton
@@ -31,4 +30,5 @@ func _on_resume_pressed() -> void:
 func _on_quit_pressed() -> void:
 	get_tree().paused = false
 	GameManager.reset()
-	get_tree().reload_current_scene()
+	NetworkManager.disconnect_game()
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
